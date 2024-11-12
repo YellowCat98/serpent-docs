@@ -1,4 +1,5 @@
 site_name: Serpent Docs
 nav:
-  - Getting Started:
-    - Prerequisities: getting-started/prerequisities.md
+  - Home:
+    - Getting Started:
+      - Prerequisities: getting-started/prerequisities.md
