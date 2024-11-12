@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Prerequisities - Serpent Docs</title>
+        <title>Script Syntax - Serpent Docs</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../css/brands.min.css" rel="stylesheet">
@@ -42,11 +42,11 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page">Prerequisities</a>
+    <a href="../prerequisities/" class="dropdown-item">Prerequisities</a>
 </li>
                                     
 <li>
-    <a href="../syntax/" class="dropdown-item">Script Syntax</a>
+    <a href="./" class="dropdown-item active" aria-current="page">Script Syntax</a>
 </li>
                                     
 <li>
@@ -63,12 +63,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../.." class="nav-link">
+                                <a rel="prev" href="../prerequisities/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../syntax/" class="nav-link">
+                                <a rel="next" href="../init-empty-script/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -90,7 +90,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#prerequisities" class="nav-link">Prerequisities</a>
+            <li class="nav-item" data-bs-level="1"><a href="#script-syntax" class="nav-link">Script syntax</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -99,22 +99,32 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="prerequisities">Prerequisities</h1>
+<h1 id="script-syntax">Script syntax</h1>
 <ul>
+<li>Your script is required to have a class (in which you guessed (probably not) must have the same name as the ID!!)</li>
 <li>
-<p>Before making mods, you need to first have some stuff installed, Which are:</p>
+<p>Each class must have an instance of the built-in class <code>script</code>, which its constructor takes two arguments, which are:</p>
+<blockquote>
+<p>ID: the ID of your script!
+mainClass: your script's class.</p>
+</blockquote>
 </li>
 <li>
-<p>Geometry Dash: Serpent is a Geometry Dash mod. so you obviously would need the game you're trying to modify!</p>
+<p>Syntax example:</p>
 </li>
-<li>Geode: Serpent is a mod powered using Geode SDK, you can get geode from https://geode-sdk.org!</li>
-<li>Serpent: In order to installed Serpent, you have to go into Geode and then you can download the latest version of Serpent, though as of 11/12/2024, Serpent is yet to be finished! so you'd have to get it from github for now.</li>
-<li>
-<p>Python: To keep Serpent's size manageable, you need to have python itself installed on your device, you can get python from https://python.org.</p>
-</li>
-<li>
-<p>If you got all of these installed, you're ready to continue!</p>
-</li>
+</ul>
+<pre><code class="language-py"># Serpent binds all geode and cocos functions/classes into __main__, you do not need to import any modules.
+
+class simplescript_yellowcat98:
+    def __init__(self):
+        self.script = script(&quot;simplescript_yellowcat98&quot;, self)
+
+if __name__ == &quot;__main__&quot;:
+    simplescript_yellowcat98() # Initailze an instance of simplescript_yellowcat98, this will be executed on startup.
+</code></pre>
+<ul>
+<li>Now we have an empty mod!</li>
+<li>What can you do with it? nothing basically because uhh it does nothing other than initialize a new script, it should execute if it's enabled though.</li>
 </ul></div>
             </div>
         </div>
