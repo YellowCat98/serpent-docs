@@ -3,3 +3,5 @@ nav:
   - Home: index.md
   - Getting Started:
     - Prerequisities: getting-started/prerequisities.md
+    - Script Syntax: getting-started/syntax.md
+    - Initialize an empty script: getting-started/init-empty-script.md
