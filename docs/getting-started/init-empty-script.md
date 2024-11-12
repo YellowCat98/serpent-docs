@@ -1,5 +1,5 @@
-# Initializing an empty script
-- In order to create an empty script, create a folder, this can be anywhere!
+# Initializing a script
+- In order to create a script, create a folder, this can be anywhere!
 - inside this folder, there'll be two files.
 - `script.json`: This is a json file which includes mod metadata, this is the required syntax for it:
 ```json
@@ -13,4 +13,4 @@
 ```
 - `mod_id.py`: This is the main script! note that it is required for it to have the same name as the ID otherwise it won't execute! (check the Script syntax section )
 
-- Now that you've set up the empty script, package it into a .zip file! please keep in mind that it is required for it to have the same filename as the ID otherwise your mod's script will not execute either (i think)
+- Now that it's been set up, you're ready to start coding!
