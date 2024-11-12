@@ -87,7 +87,12 @@
               </ul>
             </li>
             
-            <li class="nav-item" data-bs-level="1"><a href="#thew" class="nav-link">THEW</a>
+            <li class="nav-item" data-bs-level="1"><a href="#initializing-an-empty-script" class="nav-link">Initializing an empty script</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#script-syntax" class="nav-link">Script syntax</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -113,7 +118,55 @@
 <p>If you got all of these installed, you're ready to continue!</p>
 </li>
 </ul>
-<h1 id="thew">THEW</h1></div>
+<h1 id="initializing-an-empty-script">Initializing an empty script</h1>
+<ul>
+<li>In order to create an empty script, create a folder, this can be anywhere!</li>
+<li>inside this folder, there'll be two files.</li>
+<li><code>script.json</code>: This is a json file which includes mod metadata, this is the required syntax for it:</li>
+</ul>
+<pre><code class="language-json">// (this is only in jsonc for explaining what each key does, note that your script.json must not have comments! (i think it should work fine though))
+{
+    &quot;serpent&quot;: &quot;1.0.0&quot;, // This is the version of Serpent that the script is made for.
+    &quot;name&quot;: &quot;Simple Script&quot;, // This is the name for the script
+    &quot;id&quot;: &quot;simplescript_yellowcat98&quot;, // This is the ID of the script to avoid collision between other scripts!
+    &quot;developer&quot;: &quot;YellowCat98&quot; // The developer of the script!
+}
+</code></pre>
+<ul>
+<li>
+<p><code>mod_id.py</code>: This is the main script! note that it is required for it to have the same name as the ID otherwise it won't execute! (check the Script syntax section )</p>
+</li>
+<li>
+<p>Now that you've set up the empty script, package it into a .zip file! please keep in mind that it is required for it to have the same filename as the ID otherwise your mod's script will not execute either (i think)</p>
+</li>
+</ul>
+<h1 id="script-syntax">Script syntax</h1>
+<ul>
+<li>Your script is required to have a class (in which you guessed (probably not) must have the same name as the ID!!)</li>
+<li>
+<p>Each class must have an instance of the built-in class <code>script</code>, which its constructor takes two arguments, which are:</p>
+<blockquote>
+<p>ID: the ID of your script!
+mainClass: your script's class.</p>
+</blockquote>
+</li>
+<li>
+<p>Syntax example:</p>
+</li>
+</ul>
+<pre><code class="language-py"># Serpent binds all geode and cocos functions/classes into __main__, you do not need to import any modules.
+
+class simplescript_yellowcat98:
+    def __init__(self):
+        self.script = script(&quot;simplescript_yellowcat98&quot;, self)
+
+if __name__ == &quot;__main__&quot;:
+    simplescript_yellowcat98() # Initailze an instance of simplescript_yellowcat98, this will be executed on startup.
+</code></pre>
+<ul>
+<li>Now we have an empty mod!</li>
+<li>What can you do with it? nothing basically because uhh it does nothing other than initialize a new script, it should execute if it's enabled though.</li>
+</ul></div>
             </div>
         </div>
 
