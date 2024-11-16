@@ -5,3 +5,4 @@ nav:
     - Prerequisities: getting-started/prerequisities.md
     - Initializing an empty script: getting-started/init-empty-script.md
     - Script Syntax: getting-started/syntax.md
+    - Hooks: getting-started/hooks.md
