@@ -111,6 +111,11 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#sprites-from-spritesheets" class="nav-link">Sprites from Spritesheets</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
@@ -131,7 +136,16 @@
     sprite = CCSprite.create(&quot;&lt;spriteName&gt;.png&quot;) # Remember, this doesn't get sprites from spritesheets, we need a different method for that!
     sprite.setPosition(CCPoint(winSize.width / 2, winSize.height / 2)) # Place the sprite in the middle of the screen.
     return True
-</code></pre></div>
+</code></pre>
+<h1 id="sprites-from-spritesheets">Sprites from Spritesheets</h1>
+<ul>
+<li>It's pretty simple, instead of calling the static method <code>CCSprite.create</code> we call <code>CCSprite.createWithSpriteFrameName</code>, here's an example!</li>
+</ul>
+<p>```python
+def MenuLayer_init(self, this):
+    if not this.init(): return False
+    sprite = CCSprite.create("GJ_arrow_01_001.png") # GJ_arrow_01_001.png is a sprite from the GJ_gamesheet_03.png spritesheet, though it does not matter!
+    return True</p></div>
             </div>
         </div>
 
