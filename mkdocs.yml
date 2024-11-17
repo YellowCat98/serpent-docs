@@ -6,3 +6,6 @@ nav:
     - Initializing an empty script: getting-started/init-empty-script.md
     - Script Syntax: getting-started/syntax.md
     - Hooks: getting-started/hooks.md
+  - Tutorials:
+    - UI Elements: tutorials/ui-elements.md
+    - Sprites: tutorials/sprites.md
