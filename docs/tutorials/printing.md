@@ -11,4 +11,4 @@ def MenuLayer_init(self, this):
     else:
         self.script.info("You are sigma!")
 ```
-**Remember that using `input` does not work at all, at it makes a call to stdin and geode restricts stdin calls, it only allows stdout.
+**Remember that using `input` does not work at all, at it makes a call to stdin and geode restricts stdin calls, it only allows stdout.**
