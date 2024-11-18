@@ -9,3 +9,4 @@ nav:
   - Tutorials:
     - UI Elements: tutorials/ui-elements.md
     - Sprites: tutorials/sprites.md
+    - Printing to the console: tutorials/printing.md
