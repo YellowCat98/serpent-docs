@@ -13,6 +13,9 @@
 
 - ### Steps:
 
+
+- First, we call script.initAllHooks in `__init__` for the hooks to initialize.
+
 - We define a function named `MenuLayer_onMoreGames` within our script's class.
 - then pass `self, this` as the first two arguments, Serpent requires these two arguments so we'd be able to call the original if we need to (we will explain what an original is later.)
 - Then we just pass whatever arguments `MenuLayer_onMoreGames` takes, in this case it's a single argument, it can have any name you want.
