@@ -18,4 +18,6 @@ if __name__ == "__main__":
 - Now we have a script that does NOTHING!
 - What can you do with it? nothing basically because uhh it does nothing other than initialize a new script, it should execute if it's enabled though.
 
+- (make sure its enabled because serpent doesn't enable scripts by default)
+
 - Now all that's left is to package it into a .zip file, the .zip file MUST have the same filename as the ID.
