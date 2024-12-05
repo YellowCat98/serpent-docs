@@ -149,11 +149,11 @@
 <ul>
 <li>It's pretty simple, instead of calling the static method <code>CCSprite.create</code> we call <code>CCSprite.createWithSpriteFrameName</code>, here's an example!</li>
 </ul>
-<p>```python
-def MenuLayer_init(self, this):
+<pre><code class="language-python">def MenuLayer_init(self, this):
     if not this.init(): return False
-    sprite = CCSprite.create("GJ_arrow_01_001.png") # GJ_arrow_01_001.png is a sprite from the GJ_gamesheet_03.png spritesheet, though it does not matter!
-    return True</p></div>
+    sprite = CCSprite.create(&quot;GJ_arrow_01_001.png&quot;) # GJ_arrow_01_001.png is a sprite from the GJ_gamesheet_03.png spritesheet, though it does not matter!
+    return True
+</code></pre></div>
             </div>
         </div>
 
