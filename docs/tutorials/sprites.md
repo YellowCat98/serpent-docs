@@ -18,6 +18,6 @@ def MenuLayer_init(self, this):
 ```python
 def MenuLayer_init(self, this):
     if not this.init(): return False
-    sprite = CCSprite.create("GJ_arrow_01_001.png") # GJ_arrow_01_001.png is a sprite from the GJ_gamesheet_03.png spritesheet, though it does not matter!
+    sprite = CCSprite.createWithSpriteFrameName("GJ_arrow_01_001.png") # GJ_arrow_01_001.png is a sprite from the GJ_gamesheet_03.png spritesheet, though it does not matter!
     return True
 ```
