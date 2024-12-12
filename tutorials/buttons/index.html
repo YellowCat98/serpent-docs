@@ -109,6 +109,11 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#complete-code" class="nav-link">Complete code:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
@@ -120,7 +125,43 @@
 <li>You make a callback function with <code>sender</code> as the first argument, then create a CCMenuItemSpriteExtra through its <code>create()</code> method, this is the function signature.</li>
 <li><code>CCMenuItemSpriteExtra::create(my_sprite, this, menu_selector(MyFunction));</code></li>
 <li>This is C++, but since i have literally no idea on how i would get menu_selector working through python, we will use geode's awesome <code>CCMenuItemExt.createSpriteExtra</code> method, here's some example code:</li>
-</ul></div>
+</ul>
+<pre><code class="language-python"># `sender`: is the button that uses this function as a callback.
+def my_function_callback(self, sender):
+    self.script.info(&quot;Hello, World, This is from a button!&quot;)
+
+def MenuLayer_init(self, this):
+    if not this.init(): return False
+    button = CCMenuItemExt.createSpriteExtra(CCSprite.createWithSpriteFrameName(&quot;GJ_arrow_01_001.png&quot;), my_function_callback)
+    menu = this.getChildByID(&quot;bottom-menu&quot;)
+
+    return True
+</code></pre>
+<ul>
+<li>This will put a button in the button menu! like this:
+<img alt="The image" src="../../img/buttons-test-img.png" /></li>
+</ul>
+<h1 id="complete-code">Complete code:</h1>
+<ul>
+<li>Since this is kinda complex. this is the complete source if you wanna just copy and paste!</li>
+</ul>
+<pre><code class="language-python">class buttons_yellowcat98:
+    def __init__(self):
+        self.script = script(&quot;buttons_yellowcat98&quot;, self)
+        self.script.initAllHooks()
+
+    def callback(self, sender):
+                FLAlertLayer.create(&quot;Hello&quot;, &quot;Hello World&quot;, &quot;thanks&quot;).show()
+
+    def MenuLayer_init(self, this):
+        if not this.init(): return False
+        button = CCMenuItemExt.createSpriteExtra(CCSprite.createWithSpriteFrameName(&quot;GJ_arrow_01_001.png&quot;), self.callback)
+        this.getChildByID(&quot;bottom-menu&quot;).addChild(button)
+        return True
+
+if __name__ == &quot;__main__&quot;:
+        buttons_yellowcat98()
+</code></pre></div>
             </div>
         </div>
 
